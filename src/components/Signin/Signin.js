@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+const SERVER_URL = "https://aqueous-meadow-49375.herokuapp.com";
 
 class Signin extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class Signin extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("http://localhost:3001/signin", {
+    fetch(`${SERVER_URL}`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

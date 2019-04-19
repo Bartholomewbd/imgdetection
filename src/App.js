@@ -9,6 +9,8 @@ import Rank from "./components/Rank/Rank";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import "./App.css";
 
+const SERVER_URL = "https://aqueous-meadow-49375.herokuapp.com";
+
 const particleOptions = {
   particles: {
     number: {
@@ -80,7 +82,7 @@ class App extends Component {
   onDetectSubmit = () => {
     this.setState({ imgUrl: this.state.input });
     console.log(this.state.input);
-    fetch("http://localhost:3001/imageurl", {
+    fetch(`${SERVER_URL}/imageurl`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -90,7 +92,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch("http://localhost:3001/image", {
+          fetch(`${SERVER_URL}/image`, {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
