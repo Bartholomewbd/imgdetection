@@ -35,6 +35,18 @@ class Signin extends Component {
       });
   };
 
+  onGuestSubmit = () => {
+    const user = {
+      email: "guest@email.com",
+      faces: 0,
+      id: -1,
+      joined: new Date(),
+      name: "Guest"
+    };
+    this.props.loadUser(user);
+    this.props.onRouteChange("home");
+  };
+
   render() {
     const { onRouteChange } = this.props;
     return (
@@ -71,7 +83,7 @@ class Signin extends Component {
               </fieldset>
               <div className="">
                 <input
-                  onClick={this.onSubmitSignIn}
+                  onClick={() => this.onSubmitSignIn(this.props.SERVER_URL)}
                   className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                   type="submit"
                   value="Sign in"
@@ -83,6 +95,14 @@ class Signin extends Component {
                   className="f6 link dim black db pointer"
                 >
                   Register
+                </p>
+              </div>
+              <div className="lh-copy mt3">
+                <p
+                  className="f6 dim dark-gray bg-near-white br1 db b pointer"
+                  onClick={this.onGuestSubmit}
+                >
+                  Continue As Guest
                 </p>
               </div>
             </div>
