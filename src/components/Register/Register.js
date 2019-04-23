@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-const SERVER_URL = "https://aqueous-meadow-49375.herokuapp.com";
 
 class Register extends Component {
   constructor(props) {
@@ -23,7 +22,7 @@ class Register extends Component {
     this.setState({ password: event.target.value });
   };
 
-  onSubmitRegister = () => {
+  onSubmitRegister = SERVER_URL => {
     fetch(`${SERVER_URL}/register`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
