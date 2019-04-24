@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "15daadd9be28435da286",
+    "revision": "97d5b9ffa2900d4978ac",
     "url": "/imgdetection/static/css/main.1c8de250.chunk.css"
   },
   {
-    "revision": "15daadd9be28435da286",
-    "url": "/imgdetection/static/js/main.f9b381bf.chunk.js"
+    "revision": "97d5b9ffa2900d4978ac",
+    "url": "/imgdetection/static/js/main.69528b1d.chunk.js"
   },
   {
     "revision": "dc12cdc5309dc0ef6ced",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/imgdetection/static/media/camera.24088577.png"
   },
   {
-    "revision": "ae838f2d6b3e6ba33e0326a24d2baa1b",
+    "revision": "e18331aec226b066eda399ec98133cd9",
     "url": "/imgdetection/index.html"
   }
 ];
